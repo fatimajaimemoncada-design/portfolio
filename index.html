@@ -46,7 +46,7 @@
     html,body,a,button,.tile{cursor:auto}
     .cursor-dot{display:none}
   }
-  html,body{background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+  html,body{background:var(--bg);color:var(--fg);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;-webkit-tap-highlight-color:transparent}
   body{
     font-family:"Inter","Inter Display",system-ui,sans-serif;
     font-feature-settings:"ss01","cv11";
@@ -54,6 +54,7 @@
     line-height:1.5;
     font-weight:400;
     overflow-x:hidden;
+    overflow-wrap:break-word;
   }
   a{color:inherit;text-decoration:none}
   img{display:block;max-width:100%}
@@ -339,6 +340,68 @@
   }
   .tweaks button.x{background:none;border:none;cursor:pointer;font-family:inherit;font-size:14px}
 
+  /* ---------- BLOG (work in progress) ---------- */
+  .blog-wip{padding:0 var(--pad) 96px}
+  .wip-card{
+    position:relative;
+    border:1px solid var(--hair);
+    padding:72px 56px 64px;
+    max-width:760px;margin:0 auto;
+    background:linear-gradient(180deg,#fff 0%,#fbf9f7 100%);
+    overflow:hidden;
+  }
+  .wip-card::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--hair);
+  }
+  .wip-card::after{
+    content:"";position:absolute;top:0;height:2px;width:30%;
+    background:var(--fg);
+    animation: wip-slide 4s var(--ease) infinite;
+  }
+  @keyframes wip-slide{
+    0%{left:-30%}
+    100%{left:100%}
+  }
+  .wip-tag{
+    display:inline-flex;align-items:center;gap:8px;
+    font-family:"JetBrains Mono",monospace;font-size:11px;
+    text-transform:uppercase;letter-spacing:.1em;
+    padding:6px 12px;border:1px solid var(--fg);
+    margin-bottom:36px;
+  }
+  .wip-tag .blink{
+    width:6px;height:6px;border-radius:50%;background:#8c1414;
+    animation: wip-blink 1.4s ease-in-out infinite;
+  }
+  @keyframes wip-blink{
+    0%,100%{opacity:.3}
+    50%{opacity:1}
+  }
+  .wip-card h3{
+    font-size: clamp(30px, 4.5vw, 56px);
+    font-weight:500;font-style:italic;
+    letter-spacing:-.03em;line-height:1.02;
+    margin-bottom:18px;
+    text-wrap:balance;
+  }
+  .wip-card h3 .ast{
+    display:inline-block;color:#8c1414;font-style:normal;
+    transform:translateY(-.05em);margin-left:.1em;
+    animation: wip-spin 8s linear infinite;
+  }
+  @keyframes wip-spin{from{transform:translateY(-.05em) rotate(0)}to{transform:translateY(-.05em) rotate(360deg)}}
+  .wip-card p{
+    color:var(--muted);font-size:16px;line-height:1.55;
+    max-width:52ch;margin-bottom:28px;
+  }
+  .wip-meta{
+    display:flex;justify-content:space-between;align-items:baseline;
+    border-top:1px solid var(--hair);padding-top:16px;
+    font-family:"JetBrains Mono",monospace;font-size:11px;
+    text-transform:uppercase;letter-spacing:.06em;color:var(--muted);
+    flex-wrap:wrap;gap:12px;
+  }
+
   /* ---------- LIGHTBOX ---------- */
   .lightbox{
     position:fixed;inset:0;z-index:200;
@@ -382,6 +445,71 @@
     object-fit:contain;
     background:#000;
   }
+
+  /* ---------- MOBILE / iOS ---------- */
+  @media (max-width:900px){
+    :root{--pad:24px}
+    .nav{padding:14px var(--pad)}
+    .nav .links{gap:14px}
+    .nav .links a{font-size:13px}
+    .nav .time{display:none}
+    .hero{padding:108px var(--pad) 32px;column-gap:24px;row-gap:32px}
+    .hero .title{
+      font-size: clamp(40px, 11vw, 84px);
+      letter-spacing:-.04em;
+      hyphens:auto;-webkit-hyphens:auto;
+    }
+    .marquee{padding:18px 0}
+    .marquee-track{gap:36px;font-size:clamp(22px,7vw,44px)}
+    .marquee-track span{gap:36px}
+    .section{padding:72px var(--pad) 48px}
+    .branch-head{
+      grid-template-columns:1fr;
+      padding:48px var(--pad) 24px;
+      gap:14px;
+    }
+    .branch-head h2{font-size:clamp(36px,10vw,64px);line-height:.98}
+    .branch-head .desc{padding-top:0;font-size:14px}
+    .sec-head{grid-template-columns:1fr;gap:10px;padding-bottom:20px;margin-bottom:32px}
+    .grid{padding:0 var(--pad) 56px;gap:14px}
+    .info-strip{padding:32px var(--pad) 56px;gap:20px}
+    .about{padding:64px var(--pad) 32px;gap:32px}
+    .about .lead{font-size:clamp(22px,5.4vw,32px)}
+    .about .kv{grid-template-columns:120px 1fr;gap:12px;padding:12px 0}
+    .about .kv p{font-size:14px}
+    .contact{padding:48px var(--pad) 32px}
+    .contact h2{
+      font-size:clamp(48px,16vw,120px);
+      letter-spacing:-.04em;line-height:.92;
+      hyphens:auto;-webkit-hyphens:auto;
+    }
+    .contact .socials{gap:14px}
+    footer{flex-wrap:wrap;gap:8px;padding:24px var(--pad)}
+    .blog-wip{padding:0 var(--pad) 64px}
+    .wip-card{padding:48px 24px 40px}
+    .wip-tag{margin-bottom:24px}
+    .lb-meta{padding:14px 18px}
+    .lb-stage{padding:16px;gap:14px}
+    .lb-head{flex-direction:column;gap:14px}
+    .lb-title{font-size:18px}
+    .lb-nav{align-self:flex-end}
+    .lb-stage video{max-width:100%;max-height:70vh}
+  }
+  @media (max-width:520px){
+    :root{--pad:18px}
+    .nav .brand span{display:none}
+    .hero .portrait{width:70vw;margin:0 auto}
+    .info-strip{grid-template-columns:1fr}
+    .branch-head .tags span{font-size:9px}
+    .lb-btn{width:32px;height:32px}
+  }
+  /* Hide custom-cursor work entirely on touch / iOS */
+  @media (hover:none),(pointer:coarse){
+    html,body,a,button,input,select,textarea,.tile,[role=button]{cursor:auto}
+    .cursor-dot{display:none !important}
+    .nav{mix-blend-mode:normal;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--fg)}
+    .tile .cap .arr{transform:none;opacity:1}
+  }
 </style>
 </head>
 <body>
@@ -402,6 +530,7 @@ const TWEAKS_DEFAULTS = /*EDITMODE-BEGIN*/{
   <a class="brand" href="#top">Fatima Jaime<span style="opacity:.5">®</span></a>
   <div class="links">
     <a href="#work">Work</a>
+    <a href="#blog">Blog</a>
     <a href="#about">About</a>
     <a href="#contact">Contact</a>
   </div>
@@ -498,6 +627,28 @@ const TWEAKS_DEFAULTS = /*EDITMODE-BEGIN*/{
     <div class="grid cols-2" id="grid-campaigns"></div>
   </div>
 
+</section>
+
+<!-- BLOG (work in progress) -->
+<section class="section" id="blog">
+  <div class="branch-head" data-reveal>
+    <span class="idx">— Branch 05</span>
+    <h2>Notes &amp;<br/><em>thinking</em></h2>
+    <div class="desc">
+      A small corner for half-essays, project diaries, and occasional rambles on type, taste &amp; the joy of designing in public.
+    </div>
+  </div>
+  <div class="blog-wip" data-reveal>
+    <div class="wip-card">
+      <span class="wip-tag"><span class="blink"></span> work in progress</span>
+      <h3>Brewing the first posts<span class="ast">✦</span></h3>
+      <p>Currently writing about identity systems, the editorial layouts that taught me restraint, and why choosing a typeface still feels romantic. Pop back soon — or DM me on LinkedIn if you want a heads-up when it's live.</p>
+      <div class="wip-meta">
+        <span>Estimated launch — soon™</span>
+        <span>Madrid · 2026</span>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- INFO STRIP (Currently / Based in / Experience / Tools) -->
