@@ -328,7 +328,6 @@ const data = {
       cover: 'assets/campaigns/sia-cover.jpg',
       images: [
         'assets/campaigns/sia-cover.jpg',
-        'assets/campaigns/sia-2.jpg',
         'assets/campaigns/sia-3.jpg',
         'assets/campaigns/sia-4.jpg',
       ],
