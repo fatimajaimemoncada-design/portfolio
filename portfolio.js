@@ -644,6 +644,37 @@ const io = new IntersectionObserver((entries)=>{
 
 document.querySelectorAll('[data-reveal]').forEach(el=>io.observe(el));
 
+// ------------ Auto-hide nav on scroll-down, reveal on scroll-up or mouse-near-top ------------
+(function(){
+  const nav = document.querySelector('.nav');
+  if (!nav) return;
+  const TOP_GUARD = 80;        // never hide while within this many px of the top
+  const SCROLL_DELTA = 6;      // ignore tiny jitter
+  const REVEAL_BAND = 80;      // reveal when cursor is within this many px of the top
+  let lastY = window.scrollY;
+  let ticking = false;
+  function update(){
+    const y = window.scrollY;
+    const dy = y - lastY;
+    if (y < TOP_GUARD){
+      nav.classList.remove('nav-hidden');
+      nav.classList.remove('is-scrolled');
+    } else {
+      nav.classList.add('is-scrolled');
+      if (dy > SCROLL_DELTA) nav.classList.add('nav-hidden');
+      else if (dy < -SCROLL_DELTA) nav.classList.remove('nav-hidden');
+    }
+    lastY = y;
+    ticking = false;
+  }
+  window.addEventListener('scroll', () => {
+    if (!ticking){ requestAnimationFrame(update); ticking = true; }
+  }, { passive: true });
+  window.addEventListener('mousemove', (e) => {
+    if (e.clientY <= REVEAL_BAND) nav.classList.remove('nav-hidden');
+  });
+})();
+
 // ------------ Madrid clock ------------
 function tick(){
   const now = new Date();
