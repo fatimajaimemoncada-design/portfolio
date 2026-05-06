@@ -328,7 +328,6 @@ const data = {
       cover: 'assets/campaigns/sia-cover.jpg',
       images: [
         'assets/campaigns/sia-cover.jpg',
-        'assets/campaigns/sia-1.jpg',
         'assets/campaigns/sia-2.jpg',
         'assets/campaigns/sia-3.jpg',
         'assets/campaigns/sia-4.jpg',
@@ -413,11 +412,6 @@ Object.keys(data).forEach(k => renderBranch(k, data[k]));
         ? `<video src="${src}" class="${cls}" muted loop playsinline preload="metadata" ${n===i?'autoplay':''} controls></video>`
         : `<img src="${src}" alt="${p.title} — ${n+1}" class="${cls}"/>`;
     }).join('');
-    const navHTML = p.images.length > 1
-      ? `<span class="lb-count">${i+1} / ${p.images.length}</span>
-         <button class="lb-btn" data-lb-dir="-1" type="button" aria-label="Previous">←</button>
-         <button class="lb-btn" data-lb-dir="1" type="button" aria-label="Next">→</button>`
-      : '';
     meta.innerHTML =
       `<div class="lb-head">
         <div>
@@ -425,7 +419,6 @@ Object.keys(data).forEach(k => renderBranch(k, data[k]));
           <div class="lb-sub">${p.subtitle || ''} · ${p.year}</div>
         </div>
         <div class="lb-nav">
-          ${navHTML}
           <button class="lb-btn lb-x" data-lb-close type="button" aria-label="Close">×</button>
         </div>
       </div>
