@@ -79,7 +79,6 @@ const data = {
       cover: 'assets/editorial/rubik/cover.jpg',
       images: [
         'assets/editorial/rubik/cover.jpg',
-        'assets/editorial/rubik/interior-1.jpg',
         'assets/editorial/rubik/interior-2.jpg',
         'assets/editorial/rubik/interior-3.jpg',
       ],
@@ -92,7 +91,6 @@ const data = {
       cover: 'assets/editorial/isii/cover.jpg',
       images: [
         'assets/editorial/isii/cover.jpg',
-        'assets/editorial/isii/interior.jpg',
       ],
     },
     {
