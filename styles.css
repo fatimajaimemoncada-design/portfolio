@@ -67,6 +67,12 @@ img{display:block;max-width:100%}
 }
 .nav .links a:hover::after{transform:scaleX(1)}
 .nav .links a.is-active::after{transform:scaleX(1)}
+.nav .links a.split{margin-left:24px;position:relative}
+.nav .links a.split::before{
+  content:"";position:absolute;left:-16px;top:50%;
+  transform:translateY(-50%);
+  width:1px;height:14px;background:currentColor;opacity:.35;
+}
 .nav .brand{font-weight:600;font-size:14px;letter-spacing:-.01em}
 .nav .time{font-family:"JetBrains Mono",monospace;font-size:11px;opacity:.7}
 
@@ -505,6 +511,8 @@ html[data-blog-lang="en"] [data-lang-text="en"]{display:inline}
   .nav{padding:14px var(--pad)}
   .nav .links{gap:14px}
   .nav .links a{font-size:13px}
+  .nav .links a.split{margin-left:12px}
+  .nav .links a.split::before{left:-8px;height:11px}
   .nav .time{display:none}
   .hero{padding:108px var(--pad) 32px;column-gap:24px;row-gap:32px}
   .hero .title{
