@@ -346,6 +346,155 @@ const data = {
   ]
 };
 
+// ------------ Blog (Design Scroll of the Month) ------------
+// Bilingual: each translatable field has {es, en} keys.
+// English translations are drafts — review before publishing.
+// Newest editions first — dropdown order follows this array.
+const blog = [
+  {
+    month: '2026-04',
+    label: { es: 'Abril 2026', en: 'April 2026' },
+    posts: [
+      {
+        title: { es: 'CORTA Lab', en: 'CORTA Lab' },
+        body: {
+          es: [
+            'CORTA Lab nace de una idea muy clara dentro del diseño contemporáneo. Su creadora, la arquitecta chilena conocida como @lafran en TikTok, inicia el proyecto a partir de la exploración del acrílico como material base, que con el tiempo se convierte en su sello característico. Todo comienza durante su Trabajo Final de Grado en arquitectura, donde desarrolla una maqueta utilizando este material. Lo que en principio era un ejercicio académico termina evolucionando hacia un proyecto mucho más amplio.',
+            'Conocí CORTA Lab a través de su kit de reglas de diseño, una pieza que destaca por condensar distintas disciplinas en un solo objeto. Más allá de su función como herramienta, lo interesante está en cómo reúne referencias del diseño gráfico, la tipografía y la arquitectura.',
+            'Lo relevante de este tipo de propuestas no está solo en su función, sino en la construcción de un lenguaje propio. Un sistema en el que cada pieza cobra sentido en relación con las demás y donde el conjunto tiene más peso que el objeto aislado.',
+            'Aquí aparece lo que creo que es una de las ideas centrales del proyecto, el diseño modular. Este enfoque entiende el diseño como la construcción de sistemas y no de objetos cerrados. Cada elemento cumple un rol dentro de una estructura mayor, una lógica que se repite en disciplinas como la tipografía, la arquitectura o el diseño editorial, donde el foco se desplaza desde la pieza individual hacia las relaciones entre partes.',
+            'En CORTA Lab, esta lógica no solo se ve en los resultados, sino también en la experiencia de uso. Sus productos, como el joyero o la lámpara NYC, se entregan sin ensamblar, invitando al usuario a participar en su construcción. El montaje deja de ser un paso secundario para convertirse en parte del diseño mismo, incorporando al usuario dentro del sistema en lugar de posicionarlo como un simple receptor.',
+            'CORTA Lab funciona, en ese sentido, como un ejemplo claro de cómo el diseño puede plantearse como un sistema abierto, más que como un objeto cerrado. Una forma de entender el objeto no como resultado final, sino como parte de un proceso.',
+            'En ese sentido, el proyecto encaja con una forma de entender el diseño que comparto, donde no se trata solo de resolver, sino de construir algo en lo que objeto, proceso y usuario forman parte de una misma estructura.',
+          ],
+          en: [
+            'CORTA Lab grows out of a very clear idea within contemporary design. Its founder, the Chilean architect known on TikTok as @lafran, started the project by exploring acrylic as a base material — over time, it became her signature. It all began during her thesis, where she built a model using this material. What started as an academic exercise eventually evolved into something much broader.',
+            'I came across CORTA Lab through her design-rules kit, a piece that stands out for condensing several disciplines into a single object. Beyond its function as a tool, what’s interesting is how it pulls together references from graphic design, typography, and architecture.',
+            'What’s relevant about this kind of work isn’t just its function, but the construction of its own language. A system in which each piece earns meaning in relation to the others, where the whole carries more weight than any object on its own.',
+            'This is where what I think is one of the project’s central ideas appears: modular design. This approach treats design as the construction of systems rather than closed objects. Each element plays a role within a larger structure — a logic that repeats across disciplines like typography, architecture, or editorial design, where the focus shifts from the individual piece to the relationships between parts.',
+            'At CORTA Lab, this logic shows up not only in the results, but in the experience of using the products. Pieces like the jewelry box or the NYC lamp ship unassembled, inviting the user to take part in their construction. Assembly stops being a secondary step and becomes part of the design itself, bringing the user into the system instead of leaving them as a passive recipient.',
+            'In that sense, CORTA Lab works as a clear example of how design can be approached as an open system rather than a closed object. A way of understanding the object not as a final result, but as part of a process.',
+            'It fits with a way of understanding design that I share — where it isn’t just about solving, but about building something where object, process, and user are all part of the same structure.',
+          ],
+        },
+        links: [
+          { label: 'Web', href: 'https://www.cortalab.cl/' },
+          { label: 'Instagram', href: 'https://www.instagram.com/corta.lab' },
+        ],
+        images: [
+          'assets/blog/2026-04/corta-lab/01.jpg',
+          'assets/blog/2026-04/corta-lab/02.jpg',
+          'assets/blog/2026-04/corta-lab/03.jpg',
+        ],
+      },
+      {
+        title: {
+          es: 'Galeano Poggi y el diseño a través del gesto',
+          en: 'Galeano Poggi and design through gesture',
+        },
+        body: {
+          es: [
+            'Este mes descubrí Galeano Poggi, un estudio donde el diseño no se entiende solo desde el objeto, sino también desde la idea que lo origina. En su etapa actual está impulsado por Tomás Galeano, quien retoma el legado familiar para continuar el trabajo del estudio.',
+            'El origen del proyecto es significativo. Todo comienza con el diseño de una cuna para el propio Tomás cuando nació. Con el tiempo, sus padres, los arquitectos Carolina Galeano y Francisco Poggi, fundan el estudio en 2002 y desarrollan una trayectoria reconocida dentro del panorama del diseño en Argentina, consolidando una identidad clara que hoy funciona como base para esta nueva etapa.',
+            'Más que una simple continuación, lo que plantea Tomás es una forma de emprender que nace desde algo que siempre ha estado presente en su entorno. Esa relación entre herencia y decisión personal da forma a esta nueva fase del estudio, donde el pasado no desaparece sino que se reinterpreta.',
+            'En la base de su propuesta hay una idea que considero clave para entender el estudio. El diseño no se queda en la forma final del objeto, sino en la capacidad de una idea para mantenerse en el tiempo. Cuando una solución está bien planteada, su relevancia no depende de modas ni de contextos puntuales.',
+            'Hay algo especialmente interesante en este tipo de proyectos familiares dentro del diseño. Me resulta inevitable pensar en figuras como Charles and Ray Eames, donde el contexto compartido influye directamente en la manera de diseñar.',
+            'A través del contenido que comparte Tomás, se pueden ver distintas ideas del estudio en formato breve, lo que permite entender tanto los objetos como el planteamiento que hay detrás. Dentro de todo ese conjunto, hay una línea de trabajo que me interesa especialmente, la de sus lámparas.',
+            'La Dimmerlamp, diseñada en 2004, parte de una idea muy concreta pero poco habitual. En lugar de encender la luz, la libera. El objeto funciona como una caja de madera de MDF que, al tirar de su parte superior, se abre ligeramente y permite que la luz aparezca a través de esa separación. Más adelante aparece la Dimmerpack, que traslada esa misma lógica a un tubo de cartón, manteniendo el mismo gesto pero desde otro material y otra forma.',
+            'Lo que conecta ambos diseños no es tanto su forma o su material, sino el movimiento. Encender una lámpara deja de ser un gesto automático para convertirse en una acción física y consciente. No existe un interruptor convencional, sino una interacción que redefine la relación con el objeto.',
+          ],
+          en: [
+            'This month I discovered Galeano Poggi, a studio where design isn’t understood only through the object, but also through the idea that gives rise to it. In its current chapter, it’s led by Tomás Galeano, who has taken up the family legacy to continue the studio’s work.',
+            'The origin of the project is meaningful. It all begins with the design of a crib for Tomás himself when he was born. Over time, his parents — architects Carolina Galeano and Francisco Poggi — founded the studio in 2002 and built a recognized practice within Argentina’s design landscape, consolidating a clear identity that now serves as the foundation for this new chapter.',
+            'More than a simple continuation, what Tomás proposes is a way of building something that grows from what has always been part of his surroundings. That relationship between inheritance and personal decision shapes this new phase of the studio, where the past doesn’t disappear but is reinterpreted.',
+            'At the base of his proposal is an idea I think is key to understanding the studio. Design doesn’t end at the final form of the object, but in an idea’s ability to last over time. When a solution is well-conceived, its relevance doesn’t depend on trends or specific contexts.',
+            'There’s something particularly interesting about this kind of family-led project in design. I can’t help but think of figures like Charles and Ray Eames, where a shared context directly influences the way design is made.',
+            'Through the content Tomás shares, you can see different ideas from the studio in short form — which lets you understand both the objects and the thinking behind them. Within all of that, there’s one line of work that interests me especially: their lamps.',
+            'The Dimmerlamp, designed in 2004, comes from a very concrete but unusual idea. Instead of turning the light on, it releases it. The object works as a wooden MDF box that, when you pull on its top, opens slightly and lets the light come through that gap. Later comes the Dimmerpack, which carries the same logic over to a cardboard tube — keeping the same gesture but in another material and another form.',
+            'What connects both designs isn’t so much their form or material, but movement. Turning on a lamp stops being an automatic gesture and becomes a physical, conscious action. There’s no conventional switch — only an interaction that redefines the relationship with the object.',
+          ],
+        },
+        links: [],
+        images: [
+          'assets/blog/2026-04/galeano-poggi/01.webp',
+          'assets/blog/2026-04/galeano-poggi/02.webp',
+          'assets/blog/2026-04/galeano-poggi/03.webp',
+        ],
+      },
+    ],
+  },
+];
+
+let blogLang = (function(){
+  try { return localStorage.getItem('blogLang') || 'es'; } catch(e){ return 'es'; }
+})();
+
+function renderBlog(monthKey){
+  const feed = document.getElementById('blog-feed');
+  if (!feed) return;
+  const month = blog.find(m => m.month === monthKey) || blog[0];
+  if (!month) return;
+  const lang = blogLang;
+  const isVideo = (s) => /\.(mp4|webm|mov)$/i.test(s || '');
+  feed.innerHTML = month.posts.map(p => {
+    const title = p.title[lang] || p.title.es;
+    const paras = p.body[lang] || p.body.es;
+    const body = paras.map(para => `<p>${para}</p>`).join('');
+    const linksHTML = p.links && p.links.length
+      ? `<div class="blog-links">${p.links.map(l => `<a href="${l.href}" target="_blank" rel="noopener">${l.label} →</a>`).join('')}</div>`
+      : '';
+    const gallery = p.images.map(src =>
+      isVideo(src)
+        ? `<div class="blog-img"><video src="${src}" muted loop playsinline preload="metadata" autoplay></video></div>`
+        : `<div class="blog-img"><img src="${src}" alt="${title}" loading="lazy"/></div>`
+    ).join('');
+    return `
+      <article class="blog-post" data-reveal>
+        <header class="blog-post-head">
+          <h3>${title}</h3>
+        </header>
+        <div class="blog-post-body">${body}${linksHTML}</div>
+        <div class="blog-post-gallery">${gallery}</div>
+      </article>
+    `;
+  }).join('');
+  feed.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('in'));
+}
+
+function refreshMonthOptions(){
+  const sel = document.getElementById('blog-month');
+  if (!sel) return;
+  const prev = sel.value;
+  sel.innerHTML = blog.map(m => `<option value="${m.month}">${m.label[blogLang] || m.label.es}</option>`).join('');
+  if (prev) sel.value = prev;
+}
+
+function setBlogLang(lang){
+  blogLang = lang;
+  document.documentElement.setAttribute('data-blog-lang', lang);
+  document.querySelectorAll('.lang-toggle [data-lang]').forEach(b => {
+    b.classList.toggle('active', b.dataset.lang === lang);
+  });
+  refreshMonthOptions();
+  const sel = document.getElementById('blog-month');
+  renderBlog(sel ? sel.value : (blog[0] && blog[0].month));
+  try { localStorage.setItem('blogLang', lang); } catch(e){}
+}
+
+function initBlog(){
+  const sel = document.getElementById('blog-month');
+  if (!sel) return;
+  document.documentElement.setAttribute('data-blog-lang', blogLang);
+  refreshMonthOptions();
+  sel.addEventListener('change', e => renderBlog(e.target.value));
+  document.querySelectorAll('.lang-toggle [data-lang]').forEach(btn => {
+    btn.addEventListener('click', () => setBlogLang(btn.dataset.lang));
+    btn.classList.toggle('active', btn.dataset.lang === blogLang);
+  });
+  renderBlog(sel.value);
+}
+initBlog();
+
 function renderBranch(id, items){
   const grid = document.getElementById('grid-' + id);
   if (!grid) return;

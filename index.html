@@ -340,6 +340,93 @@
   }
   .tweaks button.x{background:none;border:none;cursor:pointer;font-family:inherit;font-size:14px}
 
+  /* ---------- BLOG — Design Scroll of the Month ---------- */
+  /* Language toggle: only the matching language shows */
+  [data-lang-text]{display:none}
+  html[data-blog-lang="es"] [data-lang-text="es"]{display:inline}
+  html[data-blog-lang="en"] [data-lang-text="en"]{display:inline}
+  .blog-controls{
+    display:flex;justify-content:space-between;align-items:center;gap:16px;
+    padding:0 var(--pad) 32px;flex-wrap:wrap;
+  }
+  .blog-month-picker{display:inline-flex;align-items:center;gap:14px}
+  .blog-controls label{
+    font-family:"JetBrains Mono",monospace;font-size:11px;
+    text-transform:uppercase;letter-spacing:.06em;color:var(--muted);
+  }
+  .lang-toggle{
+    display:inline-flex;align-items:stretch;
+    border:1px solid var(--fg);
+    font-family:"JetBrains Mono",monospace;font-size:11px;
+    text-transform:uppercase;letter-spacing:.06em;
+  }
+  .lang-toggle button{
+    background:none;border:none;font:inherit;color:var(--fg);
+    padding:7px 14px;cursor:none;
+    text-transform:inherit;letter-spacing:inherit;
+    border-right:1px solid var(--fg);
+    transition: background .2s var(--ease), color .2s var(--ease);
+  }
+  .lang-toggle button:last-child{border-right:none}
+  .lang-toggle button.active{background:var(--fg);color:#fff}
+  .lang-toggle button:not(.active):hover{background:var(--hair-2)}
+  .blog-controls select{
+    font-family:"JetBrains Mono",monospace;font-size:12px;
+    padding:8px 36px 8px 14px;
+    border:1px solid var(--fg);background:#fff;color:var(--fg);
+    text-transform:uppercase;letter-spacing:.04em;
+    cursor:none;appearance:none;-webkit-appearance:none;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' stroke='black' fill='none' stroke-width='1.4'/></svg>");
+    background-repeat:no-repeat;background-position:right 12px center;background-size:10px;
+  }
+  .blog-feed{padding:0 var(--pad) 96px}
+  .blog-post{
+    display:grid;grid-template-columns: 1fr 1fr;column-gap:64px;row-gap:32px;
+    padding:64px 0;
+    border-top:1px solid var(--hair);
+  }
+  .blog-post:first-child{border-top:none;padding-top:32px}
+  .blog-post-head{
+    grid-column: 1 / -1;
+  }
+  .blog-post-head h3{
+    font-size:clamp(28px,3.4vw,44px);
+    font-weight:500;letter-spacing:-.025em;line-height:1.05;
+    text-wrap:balance;
+  }
+  .blog-post-body{
+    font-size:16px;line-height:1.6;color:var(--fg);
+  }
+  .blog-post-body p{margin-bottom:16px;max-width:60ch}
+  .blog-post-body p:last-child{margin-bottom:0}
+  .blog-links{
+    margin-top:24px;display:flex;gap:18px;flex-wrap:wrap;
+    font-family:"JetBrains Mono",monospace;font-size:11px;
+    text-transform:uppercase;letter-spacing:.06em;
+  }
+  .blog-links a{
+    border-bottom:1px solid var(--fg);padding-bottom:2px;
+    transition:padding .3s var(--ease);
+  }
+  .blog-links a:hover{padding-right:8px}
+  .blog-post-gallery{
+    display:flex;flex-direction:column;gap:14px;
+  }
+  .blog-img{
+    overflow:hidden;background:var(--hair-2);
+  }
+  .blog-img img,.blog-img video{
+    width:100%;height:auto;display:block;
+    transition:transform 1s var(--ease);
+  }
+  .blog-img:hover img,.blog-img:hover video{transform:scale(1.02)}
+  @media (max-width:900px){
+    .blog-post{grid-template-columns:1fr;gap:24px;padding:40px 0}
+    .blog-post:first-child{padding-top:24px}
+    .blog-controls{padding:0 var(--pad) 20px;justify-content:flex-start}
+    .blog-feed{padding:0 var(--pad) 64px}
+  }
+
   /* ---------- BLOG (work in progress) ---------- */
   .blog-wip{padding:0 var(--pad) 96px}
   .wip-card{
@@ -621,26 +708,30 @@ const TWEAKS_DEFAULTS = /*EDITMODE-BEGIN*/{
 
 </section>
 
-<!-- BLOG (work in progress) -->
+<!-- BLOG — Design Scroll of the Month -->
 <section class="section" id="blog">
   <div class="branch-head" data-reveal>
     <span class="idx">— Branch 05</span>
-    <h2>Notes &amp;<br/><em>thinking</em></h2>
+    <h2>Design Scroll<br/><em>of the month</em></h2>
     <div class="desc">
-      A small corner for half-essays, project diaries, and occasional rambles on type, taste &amp; the joy of designing in public.
+      <span data-lang-text="es">Hora de normalizar el scroll como una forma válida de encontrar referencias. Aquí reúno algunos de los proyectos que descubrí este mes a través de contenido en formato corto en plataformas como TikTok y que, si te interesa el diseño tanto como a mí, merece la pena conocer.</span>
+      <span data-lang-text="en">Time to normalize scrolling as a valid way to find references. Here I gather some of the projects I discovered this month through short-form content on platforms like TikTok — and that, if you care about design as much as I do, are worth knowing about.</span>
     </div>
   </div>
-  <div class="blog-wip" data-reveal>
-    <div class="wip-card">
-      <span class="wip-tag"><span class="blink"></span> work in progress</span>
-      <h3>Brewing the first posts<span class="ast">✦</span></h3>
-      <p>Currently writing about identity systems, the editorial layouts that taught me restraint, and why choosing a typeface still feels romantic. Pop back soon — or DM me on LinkedIn if you want a heads-up when it's live.</p>
-      <div class="wip-meta">
-        <span>Estimated launch — soon™</span>
-        <span>Madrid · 2026</span>
-      </div>
+  <div class="blog-controls" data-reveal>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button type="button" data-lang="es">ESP</button>
+      <button type="button" data-lang="en">ENG</button>
+    </div>
+    <div class="blog-month-picker">
+      <label for="blog-month">
+        <span data-lang-text="es">Edición</span>
+        <span data-lang-text="en">Edition</span>
+      </label>
+      <select id="blog-month" aria-label="Choose month"></select>
     </div>
   </div>
+  <div class="blog-feed" id="blog-feed"></div>
 </section>
 
 <!-- INFO STRIP (Currently / Based in / Experience / Tools) -->
