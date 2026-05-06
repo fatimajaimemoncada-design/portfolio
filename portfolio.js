@@ -56,6 +56,31 @@ function placeholder({label, tone = 'warm', accent = false}){
 const data = {
   editorial: [
     {
+      title: 'Catálogo AIS',
+      year: '2024',
+      subtitle: 'Price rate catalog',
+      description: 'Price-rate catalog for AIS Plumbing and Air-Conditioning Services.',
+      cover: 'assets/editorial/ais/cover.jpg',
+      images: [
+        'assets/editorial/ais/cover.jpg',
+        'assets/editorial/ais/interior-1.jpg',
+        'assets/editorial/ais/interior-2.jpg',
+        'assets/editorial/ais/interior-3.jpg',
+      ],
+    },
+    {
+      title: 'Revista Rubik',
+      year: '2026',
+      subtitle: '7-page feature insert · February 2026',
+      description: 'A 7-page feature insert for the February 2026 issue of Rubik magazine — elevating ISII Group\'s brand presence within Spain\'s audiovisual industry, plus the back cover for the 2026 Berlin Film Festival.',
+      cover: 'assets/editorial/rubik/cover.jpg',
+      images: [
+        'assets/editorial/rubik/cover.jpg',
+        'assets/editorial/rubik/interior-2.jpg',
+        'assets/editorial/rubik/interior-3.jpg',
+      ],
+    },
+    {
       title: 'Revela Magazine',
       year: '2025',
       subtitle: 'Analog photography magazine',
@@ -69,18 +94,6 @@ const data = {
         'assets/editorial/revela/interior-3.jpg',
         'assets/editorial/revela/interior-4.jpg',
         'assets/editorial/revela/interior-5.jpg',
-      ],
-    },
-    {
-      title: 'Revista Rubik',
-      year: '2026',
-      subtitle: '7-page feature insert · February 2026',
-      description: 'A 7-page feature insert for the February 2026 issue of Rubik magazine — elevating ISII Group\'s brand presence within Spain\'s audiovisual industry, plus the back cover for the 2026 Berlin Film Festival.',
-      cover: 'assets/editorial/rubik/cover.jpg',
-      images: [
-        'assets/editorial/rubik/cover.jpg',
-        'assets/editorial/rubik/interior-2.jpg',
-        'assets/editorial/rubik/interior-3.jpg',
       ],
     },
     {
@@ -103,19 +116,6 @@ const data = {
         'assets/editorial/carabanchel/cover.jpg',
         'assets/editorial/carabanchel/interior-1.jpg',
         'assets/editorial/carabanchel/interior-2.jpg',
-      ],
-    },
-    {
-      title: 'Catálogo AIS',
-      year: '2024',
-      subtitle: 'Price rate catalog',
-      description: 'Price-rate catalog for AIS Plumbing and Air-Conditioning Services.',
-      cover: 'assets/editorial/ais/cover.jpg',
-      images: [
-        'assets/editorial/ais/cover.jpg',
-        'assets/editorial/ais/interior-1.jpg',
-        'assets/editorial/ais/interior-2.jpg',
-        'assets/editorial/ais/interior-3.jpg',
       ],
     },
   ],
