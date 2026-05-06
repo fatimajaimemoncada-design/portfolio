@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Design Scroll of the Month — Fatima Jaime</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<script>
+const TWEAKS_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "heroStyle": "stacked",
+  "workLayout": "uniform",
+  "showMarquee": true
+}/*EDITMODE-END*/;
+</script>
+
+<!-- CUSTOM CURSOR -->
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="brand" href="index.html">Fatima Jaime<span style="opacity:.5">®</span></a>
+  <div class="links">
+    <a href="index.html#work">Work</a>
+    <a href="blog.html" class="is-active">Blog</a>
+    <a href="index.html#about">About</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+  <div class="time" id="clock">MAD · 00:00</div>
+</nav>
+
+<!-- BLOG HERO -->
+<section class="blog-page-head" id="top">
+  <div class="eyebrow mono" data-reveal>
+    <span><span data-lang-text="es">Diario de diseño · Hallazgos del scroll, mensual</span><span data-lang-text="en">Design journal · Scroll finds, monthly</span></span>
+    <span>Branch 05 / 2026</span>
+  </div>
+  <h1 data-reveal>
+    Design Scroll<br/>
+    <em>of the month</em>
+  </h1>
+  <div class="blog-page-intro" data-reveal>
+    <span data-lang-text="es">Hora de normalizar el scroll como una forma válida de encontrar referencias. Aquí reúno algunos de los proyectos que descubrí este mes a través de contenido en formato corto en plataformas como TikTok y que, si te interesa el diseño tanto como a mí, merece la pena conocer.</span>
+    <span data-lang-text="en">Time to normalize scrolling as a valid way to find references. Here I gather some of the projects I discovered this month through short-form content on platforms like TikTok — and that, if you care about design as much as I do, are worth knowing about.</span>
+  </div>
+</section>
+
+<!-- BLOG CONTROLS -->
+<div class="blog-controls" data-reveal>
+  <div class="lang-toggle" role="group" aria-label="Language">
+    <button type="button" data-lang="es">ESP</button>
+    <button type="button" data-lang="en">ENG</button>
+  </div>
+  <div class="blog-month-picker">
+    <label for="blog-month">
+      <span data-lang-text="es">Edición</span>
+      <span data-lang-text="en">Edition</span>
+    </label>
+    <select id="blog-month" aria-label="Choose month"></select>
+  </div>
+</div>
+
+<!-- BLOG FEED -->
+<div class="blog-feed" id="blog-feed"></div>
+
+<footer>
+  <span>© 2026 Fatima Jaime</span>
+  <span>Madrid — Worldwide</span>
+  <span>v1.0</span>
+</footer>
+
+<!-- TWEAKS (hidden — kept for shared portfolio.js compat) -->
+<div class="tweaks" id="tweaks">
+  <h4>Tweaks <button class="x" id="closeTweaks">×</button></h4>
+  <div class="row">
+    <label>Hero wording</label>
+    <select id="tw-hero">
+      <option value="stacked">Stacked (default)</option>
+      <option value="short">Short & loud</option>
+      <option value="quiet">Quiet introduction</option>
+    </select>
+  </div>
+  <div class="row">
+    <label>Work grid layout</label>
+    <select id="tw-layout">
+      <option value="mixed">Mixed asymmetric</option>
+      <option value="uniform">Uniform 3-column</option>
+      <option value="tall">Tall gallery</option>
+    </select>
+  </div>
+  <div class="row">
+    <label>Marquee strip</label>
+    <select id="tw-marquee">
+      <option value="true">Show</option>
+      <option value="false">Hide</option>
+    </select>
+  </div>
+</div>
+
+<!-- LIGHTBOX (hidden — kept for shared portfolio.js compat) -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <div class="lb-meta"></div>
+  <div class="lb-stage"></div>
+</div>
+
+<script src="portfolio.js"></script>
+
+</body>
+</html>

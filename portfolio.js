@@ -349,6 +349,8 @@ const data = {
 // ------------ Blog (Design Scroll of the Month) ------------
 // Bilingual: each translatable field has {es, en} keys.
 // English translations are drafts — review before publishing.
+// `accent` is the colored backdrop behind images for that post.
+// `breaks` places images between paragraphs: { afterPara: <1-indexed>, images: [src...] }
 // Newest editions first — dropdown order follows this array.
 const blog = [
   {
@@ -357,6 +359,7 @@ const blog = [
     posts: [
       {
         title: { es: 'CORTA Lab', en: 'CORTA Lab' },
+        accent: '#f4e8d6',
         body: {
           es: [
             'CORTA Lab nace de una idea muy clara dentro del diseño contemporáneo. Su creadora, la arquitecta chilena conocida como @lafran en TikTok, inicia el proyecto a partir de la exploración del acrílico como material base, que con el tiempo se convierte en su sello característico. Todo comienza durante su Trabajo Final de Grado en arquitectura, donde desarrolla una maqueta utilizando este material. Lo que en principio era un ejercicio académico termina evolucionando hacia un proyecto mucho más amplio.',
@@ -377,14 +380,14 @@ const blog = [
             'It fits with a way of understanding design that I share — where it isn’t just about solving, but about building something where object, process, and user are all part of the same structure.',
           ],
         },
+        breaks: [
+          { afterPara: 2, images: ['assets/blog/2026-04/corta-lab/01.jpg'] },
+          { afterPara: 4, images: ['assets/blog/2026-04/corta-lab/02.jpg'] },
+          { afterPara: 6, images: ['assets/blog/2026-04/corta-lab/03.jpg'] },
+        ],
         links: [
           { label: 'Web', href: 'https://www.cortalab.cl/' },
           { label: 'Instagram', href: 'https://www.instagram.com/corta.lab' },
-        ],
-        images: [
-          'assets/blog/2026-04/corta-lab/01.jpg',
-          'assets/blog/2026-04/corta-lab/02.jpg',
-          'assets/blog/2026-04/corta-lab/03.jpg',
         ],
       },
       {
@@ -392,6 +395,7 @@ const blog = [
           es: 'Galeano Poggi y el diseño a través del gesto',
           en: 'Galeano Poggi and design through gesture',
         },
+        accent: '#dde5d0',
         body: {
           es: [
             'Este mes descubrí Galeano Poggi, un estudio donde el diseño no se entiende solo desde el objeto, sino también desde la idea que lo origina. En su etapa actual está impulsado por Tomás Galeano, quien retoma el legado familiar para continuar el trabajo del estudio.',
@@ -414,12 +418,14 @@ const blog = [
             'What connects both designs isn’t so much their form or material, but movement. Turning on a lamp stops being an automatic gesture and becomes a physical, conscious action. There’s no conventional switch — only an interaction that redefines the relationship with the object.',
           ],
         },
-        links: [],
-        images: [
-          'assets/blog/2026-04/galeano-poggi/01.webp',
-          'assets/blog/2026-04/galeano-poggi/02.webp',
-          'assets/blog/2026-04/galeano-poggi/03.webp',
+        breaks: [
+          { afterPara: 2, images: ['assets/blog/2026-04/galeano-poggi/01.webp'] },
+          { afterPara: 7, images: [
+            'assets/blog/2026-04/galeano-poggi/02.webp',
+            'assets/blog/2026-04/galeano-poggi/03.webp',
+          ]},
         ],
+        links: [],
       },
     ],
   },
@@ -436,25 +442,34 @@ function renderBlog(monthKey){
   if (!month) return;
   const lang = blogLang;
   const isVideo = (s) => /\.(mp4|webm|mov)$/i.test(s || '');
+  const renderBreak = (images, alt) => `
+    <div class="blog-break">
+      ${images.map(src => isVideo(src)
+        ? `<div class="blog-break-img"><video src="${src}" muted loop playsinline preload="metadata" autoplay></video></div>`
+        : `<div class="blog-break-img"><img src="${src}" alt="${alt}" loading="lazy"/></div>`
+      ).join('')}
+    </div>
+  `;
   feed.innerHTML = month.posts.map(p => {
     const title = p.title[lang] || p.title.es;
     const paras = p.body[lang] || p.body.es;
-    const body = paras.map(para => `<p>${para}</p>`).join('');
+    const breaksByPara = {};
+    (p.breaks || []).forEach(b => { breaksByPara[b.afterPara] = b.images; });
+    const flow = [];
+    paras.forEach((para, i) => {
+      flow.push(`<p>${para}</p>`);
+      const n = i + 1;
+      if (breaksByPara[n]) flow.push(renderBreak(breaksByPara[n], title));
+    });
     const linksHTML = p.links && p.links.length
       ? `<div class="blog-links">${p.links.map(l => `<a href="${l.href}" target="_blank" rel="noopener">${l.label} →</a>`).join('')}</div>`
       : '';
-    const gallery = p.images.map(src =>
-      isVideo(src)
-        ? `<div class="blog-img"><video src="${src}" muted loop playsinline preload="metadata" autoplay></video></div>`
-        : `<div class="blog-img"><img src="${src}" alt="${title}" loading="lazy"/></div>`
-    ).join('');
+    const accentStyle = p.accent ? ` style="--break-color:${p.accent}"` : '';
     return `
-      <article class="blog-post" data-reveal>
-        <header class="blog-post-head">
-          <h3>${title}</h3>
-        </header>
-        <div class="blog-post-body">${body}${linksHTML}</div>
-        <div class="blog-post-gallery">${gallery}</div>
+      <article class="blog-post" data-reveal${accentStyle}>
+        <h3 class="blog-post-title">${title}</h3>
+        ${flow.join('')}
+        ${linksHTML}
       </article>
     `;
   }).join('');
