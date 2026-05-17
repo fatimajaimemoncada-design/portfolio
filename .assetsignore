@@ -1,0 +1,11 @@
+# Files in this directory are never uploaded as Cloudflare Worker static assets.
+# Mirrors .gitignore conventions.
+.git/
+.gitignore
+.nojekyll
+.wrangler/
+.assetsignore
+wrangler.toml
+node_modules/
+*.log
+uploads/
