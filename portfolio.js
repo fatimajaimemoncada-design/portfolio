@@ -354,6 +354,96 @@ const data = {
 // Newest editions first — dropdown order follows this array.
 const blog = [
   {
+    month: '2026-06',
+    label: { es: 'Junio 2026', en: 'June 2026' },
+    posts: [
+      {
+        title: { es: 'Fennuala Belle', en: 'Fennuala Belle' },
+        accent: '#f6dde6',
+        body: {
+          es: [
+            'En medio de un scroll bastante habitual, me encontré con Fennuala Belle, y me atrapó desde el primer segundo. Su estética llamó mi atención porque, además de ser algo que personalmente siempre me ha gustado, se siente distinta a gran parte del contenido que consumimos hoy en día, especialmente dentro de ese universo más alineado con el minimalismo, el clean girl look y el “less is more”.',
+            'Desde el inicio, me dio la sensación de ser un espacio visual donde conviven la ternura y el poder, dos cualidades con las que muchas mujeres suelen identificarse y que a menudo se entienden como opuestas cuando en realidad no lo son.',
+            'Fennuala Belle es una artista, ilustradora y creativa nacida en Yorkshire, Inglaterra, que ha desarrollado una marca con su mismo nombre. Más que una marca tradicional, lo que ha construido es un universo gráfico muy definido, donde conviven la ilustración, la papelería y algunas piezas textiles. Todo parte de una identidad visual clara que se siente coherente en cada uno de los formatos en los que trabaja.',
+            'Aunque a primera vista podría relacionarse con tendencias actuales como la estética “coquette”, este proyecto no nace como respuesta a una tendencia, sino como una identidad que lleva desarrollándose desde 2020 y que se ha mantenido consistente en el tiempo. En ese sentido, es interesante cómo su marca se siente casi como una extensión directa de su identidad personal: mismo nombre, mismo lenguaje visual y mismo tono. Primero construye su estilo personal como artista, y después lo expande hacia una marca que conecta con un público que se identifica con esa estética.',
+            'En su tienda, el foco principal está en los objetos gráficos prints, ilustraciones, stickers y piezas de papelería (personalmente, mi parte favorita). A esto se suman algunas prendas, como camisetas o corsés, que mantienen el mismo lenguaje y funcionan como una extensión natural de la marca.',
+            'También es importante destacar que, dentro de este tipo de proyectos pequeños, hay un esfuerzo consciente por trabajar de forma más ética y sostenible. En el caso de las prendas, la marca tiene una política bastante clara. Utilizan telas ecológicas, materiales sobrantes y textiles vintage reciclados, desde manteles y tapices hasta cortinas, dándoles una nueva vida y reduciendo residuos. Además, apuestan por mantener una huella eléctrica más baja y utilizan materiales de embalaje sostenibles.',
+            'Creo que, como artistas, diseñadores o emprendedores, es importante poner atención en este tipo de proyectos que no solo son fieles a una estética propia, sino que también consideran el impacto de lo que producen. La sostenibilidad y la ética deberían ser parte de cualquier proceso creativo. Diseñar no es solo crear algo visualmente atractivo, sino también entender el contexto en el que existe y las consecuencias que puede tener.',
+            'Volviendo a la tienda, algo interesante es cómo funcionan algunos de sus productos de papelería. En muchos casos, puedes comprar los diseños en formato digital y recibir un PDF listo para imprimir en casa. Esto no solo reduce la necesidad de envíos innecesarios, sino que también plantea una relación más directa con el objeto. A la vez, se apela a la honestidad del comprador, ya que estos archivos son para uso personal y no están pensados para ser redistribuidos.',
+            'En general, Fennuala Belle se siente como un proyecto muy bien construido. Es una marca coherente que se ha ido desarrollando con el tiempo y que sigue creciendo sin perder su esencia.',
+          ],
+          en: [
+            'In the middle of a pretty ordinary scroll, I came across Fennuala Belle, and it caught me from the first second. Her aesthetic stood out because — beyond being something I’ve always personally loved — it feels different from most of what we consume today, especially within that world leaning toward minimalism, the clean-girl look, and “less is more”.',
+            'From the start, it felt like a visual space where tenderness and power coexist — two qualities many women identify with, and that are often read as opposites when they really aren’t.',
+            'Fennuala Belle is an artist, illustrator, and creative born in Yorkshire, England, who has built a brand under her own name. More than a traditional brand, what she’s created is a very defined graphic universe where illustration, stationery, and a few textile pieces live together. It all stems from a clear visual identity that feels coherent across every format she works in.',
+            'Although at first glance it might be tied to current trends like the “coquette” aesthetic, this project wasn’t born as a response to a trend, but as an identity she’s been developing since 2020 and has kept consistent over time. In that sense, it’s interesting how her brand feels almost like a direct extension of her personal identity: same name, same visual language, same tone. First she builds her personal style as an artist, then expands it into a brand that connects with an audience who identifies with that aesthetic.',
+            'In her shop, the focus is mainly on graphic objects — prints, illustrations, stickers, and stationery (personally, my favorite part). Alongside these are a few garments, like T-shirts or corsets, that keep the same language and work as a natural extension of the brand.',
+            'It’s also worth noting that, within this kind of small project, there’s a conscious effort to work more ethically and sustainably. With the garments, the brand has a pretty clear policy. They use eco-friendly fabrics, leftover materials, and recycled vintage textiles — from tablecloths and tapestries to curtains — giving them a new life and reducing waste. They also aim for a lower energy footprint and use sustainable packaging.',
+            'I think that as artists, designers, or entrepreneurs, it’s important to pay attention to projects like this — ones that aren’t only true to their own aesthetic but also consider the impact of what they make. Sustainability and ethics should be part of any creative process. Designing isn’t just about making something visually appealing, but also understanding the context it exists in and the consequences it can have.',
+            'Back to the shop, one interesting thing is how some of her stationery works. In many cases, you can buy the designs digitally and get a PDF ready to print at home. This not only cuts down on unnecessary shipping but also sets up a more direct relationship with the object. At the same time, it relies on the buyer’s honesty, since these files are for personal use and aren’t meant to be redistributed.',
+            'Overall, Fennuala Belle feels like a very well-built project. It’s a coherent brand that has developed over time and keeps growing without losing its essence.',
+          ],
+        },
+        breaks: [
+          { afterPara: 1, images: ['assets/blog/2026-06/fennuala-belle/01.jpg'] },
+          { afterPara: 3, images: [
+            'assets/blog/2026-06/fennuala-belle/02.avif',
+            'assets/blog/2026-06/fennuala-belle/03.avif',
+          ]},
+          { afterPara: 5, images: [
+            'assets/blog/2026-06/fennuala-belle/04.avif',
+            'assets/blog/2026-06/fennuala-belle/05.jpg',
+          ]},
+          { afterPara: 7, images: ['assets/blog/2026-06/fennuala-belle/06.avif'] },
+          { afterPara: 8, images: [
+            'assets/blog/2026-06/fennuala-belle/07.jpg',
+            'assets/blog/2026-06/fennuala-belle/08.avif',
+          ]},
+        ],
+        links: [],
+      },
+      {
+        title: { es: 'Ale Sketch', en: 'Ale Sketch' },
+        accent: '#efd9c6',
+        body: {
+          es: [
+            'Ale Sketch es una ilustradora y artista mexicana cuyo trabajo gira en torno al papel como medio principal. No hay demasiada información personal disponible sobre ella en internet, pero en este caso tampoco parece necesaria, ya que su trabajo comunica lo suficiente por sí solo.',
+            'La descubrí en TikTok hace unos dos años, en vísperas de Día de Muertos. Como suele pasar, al ser mexicana, el algoritmo estaba completamente volcado hacia contenido relacionado con esta fecha, y fue ahí donde vi uno de sus videos construyendo un mini altar hecho completamente de papel. Fue uno de esos contenidos que se quedan contigo y te hacen pensar ojalá se me hubiera ocurrido hacer algo así.',
+            'Tiempo después volvió a aparecer en mis redes, y fue entonces cuando decidí incluirla en esta edición de Scroll of the Month.',
+            'A diferencia de otros perfiles, Ale no vende un producto como tal, sino un servicio. Su trabajo se centra en la creación de piezas de papelería y estructuras hechas en papel para distintos tipos de eventos o contextos, desde intervenciones para bodas hasta instalaciones para stands, pop-ups, piezas decorativas para espacios personales o incluso ramos de novia. Más que un catálogo cerrado, lo que ofrece es la posibilidad de adaptar el papel a distintas necesidades, incluso a aquellas que en un principio no parecen evidentes.',
+            'Más allá del formato, lo interesante está en cómo lleva este material a otro nivel. No se queda en lo bidimensional o en lo funcional, sino que lo utiliza para construir experiencias.',
+            'Este texto no es especialmente largo, pero sí busca destacar proyectos como el de Ale, artistas que logran transformar su práctica en un servicio manteniendo una identidad clara y apostando por explorar a fondo su medio.',
+            'A partir de este proyecto me surge la inspiración para cuestionar materiales cotidianos que usamos durante el día a día sin cuestionarnos realmente ¿hasta dónde pueden llegar? ¿Cuántas posibilidades tiene algo tan común? ¿Qué se puede hacer con ellos más allá de lo que ya se hace?',
+          ],
+          en: [
+            'Ale Sketch is a Mexican illustrator and artist whose work revolves around paper as its main medium. There isn’t much personal information about her online, but in this case it doesn’t really seem necessary — her work says enough on its own.',
+            'I discovered her on TikTok about two years ago, right around Día de Muertos. As usually happens, being Mexican, my algorithm was completely tilted toward content about the holiday, and that’s where I saw one of her videos building a mini altar made entirely of paper. It was one of those things that stays with you and makes you think, I wish I’d thought of doing something like that.',
+            'A while later she showed up in my feed again, and that’s when I decided to include her in this edition of Scroll of the Month.',
+            'Unlike other profiles, Ale doesn’t sell a product as such, but a service. Her work centers on creating stationery pieces and paper structures for different kinds of events or contexts — from wedding installations to setups for stands, pop-ups, decorative pieces for personal spaces, or even bridal bouquets. More than a fixed catalog, what she offers is the ability to adapt paper to different needs, even ones that aren’t obvious at first.',
+            'Beyond the format, what’s interesting is how she takes this material to another level. She doesn’t stop at the two-dimensional or the functional — she uses it to build experiences.',
+            'This piece isn’t especially long, but it does aim to highlight projects like Ale’s — artists who manage to turn their practice into a service while keeping a clear identity and committing to fully explore their medium.',
+            'This project sparks the inspiration to question everyday materials we use without really asking ourselves: how far can they go? How many possibilities does something so ordinary hold? What can be done with them beyond what’s already being done?',
+          ],
+        },
+        breaks: [
+          { afterPara: 2, images: ['assets/blog/2026-06/ale-sketch/01.jpg'] },
+          { afterPara: 4, images: [
+            'assets/blog/2026-06/ale-sketch/02.jpg',
+            'assets/blog/2026-06/ale-sketch/03.jpg',
+          ]},
+          { afterPara: 5, images: [
+            'assets/blog/2026-06/ale-sketch/04.jpg',
+            'assets/blog/2026-06/ale-sketch/05.jpg',
+          ]},
+          { afterPara: 6, images: ['assets/blog/2026-06/ale-sketch/06.jpg'] },
+        ],
+        links: [
+          { label: 'Instagram', href: 'https://www.instagram.com/ale_sketch' },
+        ],
+      },
+    ],
+  },
+  {
     month: '2026-04',
     label: { es: 'Abril 2026', en: 'April 2026' },
     posts: [
